@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and shop our products.">
+    <title>ACV Guitar Shoppe</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prodgridstyle.css" />
+    <link rel="stylesheet" href="css/productstyle.css" />
+  </head>
+  <body>
+    <header>
+        <div class="header-inner">
+          <button  class="mobile-menu" id="mobile-menu"> ☰ </button>
+
+          <a href="#home" class="logo" >
+            <div class="logo-mark"> ♪ </div>
+            <div class="logo-text">
+                <strong> ACV </strong>
+                <span> GUITAR SHOPPE </span>
+            </div>
+          </a>
+         
+          <nav  class="desktopNav" id="desktopNav">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#features">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+         <div class="header-actions">
+              <button class="icon-btn" id="icon-btn" title="Toggle dark/light mode">
+                  <span id="themeIcon">☀</span>
+             </button>
+                 <!-- Optional: mute/unmute control -->
+              <button class="icon-btn music-btn" id="musicToggle" title="Toggle music">
+                    🔊
+               </button>
+             <button class="icon-btn cart-btn" id="openCart" title="Shopping Cart">
+              🛒
+            <span class="cart-count" id="cartCount">0</span></button>
+         </div>
+        </div>
+    </header>
+    <section class="hero" id="home">
+       <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-kicker">
+              ACV Guitar Shoppe
+            </div>
+            <h1>Your Music <span>Journey </span>Starts Here.</h1>
+            <p>Discover carefully selected guitars for beginners,
+               passionate players and musicians ready to find 
+               their signature sound.</p>
+            <a href="#shop" class="btn btn-primary">SHOP NOW →</a>
+          </div>
+
+           <!-- Hidden audio element -->
+      <audio id="heroMusic" loop preload="auto">
+            <source src="assets/sirdomz.mp3" type="audio/mpeg">
+                  Your browser does not support audio.
+      </audio>
+ 
+     
+       </div>
+        
+    </section>
+   <main class="gridwrap">
+    <section class="section" id="shop">
+          <div class="section-heading">
+            <small>Our Collection</small>
+            <h2>Featured Guitars</h2>
+            <p>Expolre our selection of guitars avalilable
+              through ACV Guitar Shoppe.</p>
+              <ul class="guitar-types">
+                <li>Acoustic</li>
+                <li>Bass</li>
+                <li>Electric</li>
+              </ul>
+          </div>
+           
+          <div class="grid-toolbar">
+             <span id="resultCount">0 products</span>
+                <label>Sort by:
+                  <select id="sortBy">
+                    <!-- <option value="newest">Newest first</option> -->
+                    <!-- <option value="stock" selected>In stock first</option> -->
+                    <option value="priceAsc">Cheapest first</option>
+                    <option value="priceDesc">Most expensive first</option>
+                    <option value="nameAsc">Name, A–Z</option>
+                    <option value="nameDesc">Name, Z–A</option>
+                    <option value="categoryAsc">Category, A–Z</option>
+                  </select>
+              </label>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+
+          <div class="pagination" id="pagination"></div>
+     </section>
+
+     <!-- ===== ABOUT SECTION ===== -->
+   <section class="features" id="features">
+    <div class="feature-grid">
+        <div class="feature">
+            <div class="feature-icon"> 🚚 </div>
+            <h3>Fast Shipping</h3>
+            <p>Get your new instrument delivered
+                quickly and safely.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Secure Payment</h3>
+           <p>Your checkout information is protected
+                with secure payment processing.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">★</div>
+            <h3>Quality Gear</h3>
+            <p>Carefully selected instruments for
+                players at every level.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"> ♫ </div>
+            <h3> Music First</h3>
+            <p>Helping musicians find instruments
+                that inspire them to play.</p>
+        </div>
+    </div>
+</section>
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section" id="about">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="about-header">
+      <span class="about-eyebrow">Our Story</span>
+      <h2 class="about-title">Where Music <span>Comes Alive</span></h2>
+      <div class="about-divider"></div>
+    </div>
+
+    <!-- Main story grid -->
+    <div class="about-grid">
+
+      <!-- Left: Story -->
+      <div class="about-story">
+        <div class="story-badge">🎸 EST.2025</div>
+        <h3>A Legacy Built on Passion</h3>
+        <p class="story-lead">
+         "At <strong> ACV Guitar Shoppe</strong>, we proudly offer a wide range of branded guitars from some of the world's most respected manufacturers,
+          including Yamaha, Fender, Ibanez, Gibson, Epiphone, and Zemaitis. Every instrument is selected for its quality,
+          craftsmanship, and performance, ensuring that beginners and professional musicians alike can find a guitar that
+           inspires creativity and delivers exceptional sound."
+        </p>
+        <p>
+          "Elevate your music with a premium guitar from <strong>ACV Guitar Shoppe</strong>, Lithuania's trusted guitar specialist. Explore an impressive 
+          selection of industry-leading brands, including <strong> Yamaha, Fender, Gibson, Ibanez, Epiphone, Cort,</strong> and more, all under one roof.
+           Every instrument is designed to deliver exceptional tone, playability, and reliability, helping you perform at your very
+            best from the first chord to the final encore."
+        </p>
+        <p>
+          Today, we proudly represent iconic brands like <strong> Yamaha, Fender, Gibson, Ibanez, Epiphone, Cort,</strong> and more,
+           — bringing world-class instruments to Lithuania, and beyond.
+        </p>
+    </div>
+
+      <!-- Right: Image collage -->
+      <div class="about-collage">
+        <div class="collage-item big">
+          <img src="https://images.unsplash.com/photo-1519508234439-4f23643125c1?w=600" alt="Guitar store">
+        </div>
+        <div class="collage-item">
+          <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400" alt="Playing guitar">
+        </div>
+        <div class="collage-item">
+          <img src="https://images.unsplash.com/photo-1558098329-a11cff621064?w=400" alt="Guitar strings">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BRAND SHOWCASE ===== -->
+    <div class="brand-showcase">
+      <h3 class="brand-title">🎸 Brands We Proudly Carry</h3>
+      <p class="brand-subtitle">Hand-picked legendary manufacturers trusted by the world's greatest musicians</p>
+
+      <div class="brand-grid">
+
+        <!-- Fender -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/1200x/80/59/ab/8059ab309942ec33e8bed203d662deb2.jpg" alt="Fender Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Fender</h4>
+            <p>The iconic American brand behind the Stratocaster and Telecaster — a sound that defined rock 'n' roll.</p>
+            <span class="brand-tag">Since 1946</span>
+          </div>
+        </div>
+
+        <!-- Gibson -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/736x/22/ef/bb/22efbb4dcc22dffddef93f77bea77e40.jpg" alt="Gibson Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Gibson</h4>
+            <p>Home of the legendary Les Paul and SG — crafting electric guitars with unmatched warmth and sustain.</p>
+            <span class="brand-tag">Since 1902</span>
+          </div>
+        </div>
+
+        <!-- Cort -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=500" alt="Cort Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Cort</h4>
+            <p>Precision-crafted guitars from Korea delivering professional tone at accessible prices.</p>
+            <span class="brand-tag">Since 1960</span>
+          </div>
+        </div>
+
+        <!-- Yamaha -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://images.unsplash.com/photo-1588449668365-d15e397f6787?w=500" alt="Yamaha Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Yamaha</h4>
+            <p>Japanese excellence spanning acoustic, classical, and electric guitars — reliability you can trust.</p>
+            <span class="brand-tag">Since 1887</span>
+          </div>
+        </div>
+
+        <!-- Martin -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/736x/68/7d/55/687d55a810169c60295931a7e3025e6e.jpg" alt="Martin Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Martin</h4>
+            <p>The gold standard of acoustic guitars — handcrafted in Pennsylvania since 1833.</p>
+            <span class="brand-tag">Since 1833</span>
+          </div>
+        </div>
+
+        <!-- Gretsch -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/736x/6a/92/7c/6a927cf7e523fb74c1351dfda114e2f6.jpg" alt="Gretsch Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Gretsch</h4>
+            <p>The vintage rockabilly sound — hollow-body guitars with that unmistakable twang.</p>
+            <span class="brand-tag">Since 1883</span>
+          </div>
+        </div>
+
+        <!-- Flight bass -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/736x/0b/0e/53/0b0e5395326d28abe50cfd42e959f9ac.jpg" alt="Flight Ukulele">
+          </div>
+          <div class="brand-info">
+            <h4>Flight</h4>
+            <p>Our official partner for Acoustic Bass — colorful, durable, and tonally rich instruments.</p>
+            <span class="brand-tag">Official Distributor</span>
+          </div>
+        </div>
+
+        <!-- Ibanez -->
+        <div class="brand-card">
+          <div class="brand-img">
+            <img src="https://i.pinimg.com/736x/12/fa/71/12fa71dec7cbac60628189436a0d5a6d.jpg" alt="Ibanez Guitar">
+          </div>
+          <div class="brand-info">
+            <h4>Ibanez</h4>
+            <p>Fast-necked Bass guitars favored by metal and jazz virtuosos worldwide.</p>
+            <span class="brand-tag">Since 1957</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="contact-header">
+      <span class="contact-eyebrow">Get In Touch</span>
+      <h2 class="contact-title">Contact <span>Us</span></h2>
+      <div class="contact-divider"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- ===== LEFT: Information links ===== -->
+      <div class="contact-col">
+        <h3 class="contact-col__title">
+          <span class="icon">ℹ️</span> Information
+        </h3>
+        <ul class="info-list">
+          <li><a href="#"><span class="arrow">›</span> Terms of Service</a></li>
+          <li><a href="#"><span class="arrow">›</span> Privacy Policy</a></li>
+          <li><a href="#"><span class="arrow">›</span> Rent</a></li>
+          <li><a href="#"><span class="arrow">›</span> Purchase by installments</a></li>
+          <li><a href="#"><span class="arrow">›</span> Tax Return</a></li>
+          <li><a href="#"><span class="arrow">›</span> Contacts</a></li>
+          <li><a href="#"><span class="arrow">›</span> Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- ===== RIGHT: Contact details ===== -->
+      <div class="contact-col">
+        <h3 class="contact-col__title">
+          <span class="icon">📞</span> Contact Us
+        </h3>
+
+        <div class="contact-info">
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>Kaunas</strong>
+              <span>V. Kreves Pr. 98</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">☎️</div>
+            <div class="info-text">
+              <strong>Phone</strong>
+              <a href="tel:+37068657426">(+370) 686 57426</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-text">
+              <strong>Email</strong>
+              <a href="mailto:acvguitar@acv.lt">acvguitar@acv.lt</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social icons -->
+        <div class="social-wrap">
+          <p class="social-label">Follow Us</p>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn tiktok" title="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.84-.1z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn youtube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+    <footer>
+          <div class="footer__bottom container">© 2025 ACV Guitar Shoppe.</div>
+    </footer>
+        
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__head">
+    <h3>Shopping Cart</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+
+  <div class="cart-drawer__body" id="cartBody"></div>
+
+  <div class="cart-drawer__foot">
+
+    <!-- ===== CURRENCY TOGGLE ===== -->
+    <div class="cart-currency">
+      <span class="cart-label">Currency:</span>
+      <label class="switch">
+        <input type="checkbox" id="phpToggle">
+        <span class="slider">
+          <span class="slider-text eur">EUR €</span>
+          <span class="slider-text php">PHP ₱</span>
+        </span>
+      </label>
+    </div>
+
+    <!-- ===== INSTALLMENT SECTION ===== -->
+    <div class="cart-installment">
+      <label class="install-check">
+        <input type="checkbox" id="installToggle">
+        <span>💳 Pay in installments</span>
+      </label>
+
+      <div class="install-controls" id="installControls" style="display:none;">
+        <div class="install-row">
+          <label for="installYears">Pay over:</label>
+          <select id="installYears">
+            <option value="1">1 Year (12 months)</option>
+            <option value="2">2 Years (24 months)</option>
+            <option value="3">3 Years (36 months)</option>
+          </select>
+        </div>
+
+        <button class="btn-compute" id="computeBtn">
+          🧮 Compute Monthly Payment
+        </button>
+
+        <div class="install-breakdown" id="installBreakdown" style="display:none;">
+          <div class="bd-row">
+            <span>Interest Rate:</span>
+            <strong>3% per year</strong>
+          </div>
+          <div class="bd-row">
+            <span>Total Interest:</span>
+            <strong id="bdInterest">—</strong>
+          </div>
+          <div class="bd-row">
+            <span>Total Payment:</span>
+            <strong id="bdTotalPay">—</strong>
+          </div>
+          <div class="bd-row">
+            <span>Yearly Payment:</span>
+            <strong id="bdYearly">—</strong>
+          </div>
+          <div class="bd-row highlight">
+            <span>Monthly Payment:</span>
+            <strong id="bdMonthly">—</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TOTAL ===== -->
+    <div class="cart-total">
+      <span id="totalLabel">Total:</span>
+      <strong id="cartTotal">€0.00</strong>
+    </div>
+
+    <!-- ===== CHECKOUT ===== -->
+    <button class="btn btn-primary" onclick="Cart.goToCheckout()">
+      Checkout <span id="checkoutAmount"></span>
+    </button>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+      <script src="Script/script.js"></script>
+      <script src="Script/data.js"></script>
+      <script src="Script/listing.js"></script>
+      <script src="Script/cart.js"></script>
+      <script src="Script/hero-music.js"></script> 
+  </body>
+  </body>
+</html>
