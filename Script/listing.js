@@ -1,9 +1,10 @@
 const state = { page: 1, perPage: 8, cats: new Set(), brands: new Set(),
-                priceMin: 0, priceMax: 500, inStock: false, sort: 'categoryAsc' };
+                priceMin: 0, priceMax: 500, inStock: false, sort: 'categoryAsc',typeFilter: 'all'};
 
 function filteredProducts() {
   return PRODUCTS.filter(p => {
-     return true;
+      if (state.typeFilter !== 'all' && p.category !== state.typeFilter) return false;
+      return true;
   }).sort((a, b) => {
     switch (state.sort) {
       case 'priceAsc':  return a.price - b.price;
@@ -28,6 +29,19 @@ function renderGrid() {
   document.getElementById('resultCount').textContent = `${total} product${total !== 1 ? 's' : ''}`;
 
   const grid = document.getElementById('productGrid');
+
+   // ===== NEW: empty state =====
+  if (total === 0) {
+    grid.innerHTML = `
+      <div class="no-results">
+        <div class="nr-icon">🔍</div>
+        <h3>No ${state.typeFilter === 'all' ? '' : state.typeFilter + ' '}guitars found</h3>
+        <p>Try a different filter or <button class="link" onclick="resetTypeFilter()">view all products</button>.</p>
+      </div>`;
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
   grid.innerHTML = page.map(p => `
     <article class="product-card">
       <a href="product.html?id=${p.id}" class="product-card__img">
@@ -48,6 +62,14 @@ function renderGrid() {
   renderPagination(total);
 }
 
+// Helper to reset filter
+function resetTypeFilter() {
+  state.typeFilter = 'all';
+  document.querySelectorAll('.gt-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.gt-btn[data-type="all"]').classList.add('active');
+  renderGrid();
+}
+
 function renderPagination(total) {
   const pages = Math.max(1, Math.ceil(total / state.perPage));
   const pg = document.getElementById('pagination');
@@ -64,17 +86,26 @@ function goPage(n) { state.page = n; renderGrid(); window.scrollTo({ top: 400, b
 
 /* ---- DOM content---- */
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.f-cat').forEach(cb => cb.addEventListener('change', e => {
-    e.target.checked ? state.cats.add(e.target.value) : state.cats.delete(e.target.value);
-    state.page = 1; renderGrid();
-  }));
-  
-  document.querySelectorAll('.f-brand').forEach(cb => cb.addEventListener('change', e => {
-    e.target.checked ? state.brands.add(e.target.value) : state.brands.delete(e.target.value);
-    state.page = 1; renderGrid();
-  }));
-  
+ 
   document.getElementById('sortBy').addEventListener('change', e => { state.sort = e.target.value; renderGrid(); });
   renderGrid();
 }
 );
+
+/*--- Button Filter -----*/
+document.querySelectorAll('.gt-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.gt-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    state.typeFilter = btn.dataset.type;
+    state.page = 1; //1st page --reset
+
+    renderGrid();
+
+    document.getElementById('productGrid').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
