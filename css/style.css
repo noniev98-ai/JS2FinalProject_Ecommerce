@@ -444,9 +444,9 @@ header {
 }
 
 .guitar-types li:hover {
-  /* background:var(--primary);
-  color: #fff; */
-  /* transform: translateY(-2px); */
+  background:var(--primary);
+  color: #fff; 
+  transform: translateY(-2px);
 }
 
 /* =========================================================
@@ -1043,7 +1043,7 @@ header {
 }
 
 
- @media (max-width: 768px) {
+ @media (max-width: 600px) {
    .mobile-menu {
       display:block;
       background: none;
